@@ -5,19 +5,21 @@ from botocore.exceptions import ClientError
 import json
 import argparse
 
-
+# BROKEN - NEEDS FIXING
 def main(args):
     output = []
-    for line in args.key_file.readlines():
-        parts = line.split()
-        access_key_id = secret_access_key = session_token = None
-        
-        if (len(parts) >= 2):
-            access_key_id = parts[0]
-            secret_access_key = parts[1]
-            if (len(parts) >= 3):
-                session_token = parts[2]
-            output.append( validate_key(access_key_id, secret_access_key, session_token) )
+    for line in args.input_file.readlines():
+        line = line.strip()
+        if(line and not line.startswith('#')):
+            parts = line.split()
+            access_key_id = secret_access_key = session_token = None
+            
+            if (len(parts) >= 2):
+                access_key_id = parts[0]
+                secret_access_key = parts[1]
+                if (len(parts) >= 3):
+                    session_token = parts[2]
+                output.append( validate_key(access_key_id, secret_access_key, session_token) )
 
     print(json.dumps(output, indent=2)) 
 
@@ -54,10 +56,13 @@ def validate_key(access_key_id, secret_access_key, session_token=None):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Validate AWS access keys and secrets")
-    parser.add_argument('-f',
-                        '--key-file',
+    parser = argparse.ArgumentParser(description="Validate AWS access keys and secrets.")
+    parser.add_argument('-i',
+                        '--input-file',
                         type=argparse.FileType('r'),
-                        default='keys.txt')
+                        required=True)
+    parser.add_argument('-o',
+                    '--output-file',
+                    type=argparse.FileType('w'))
     args = parser.parse_args()
     main(args)
