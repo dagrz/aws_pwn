@@ -10,7 +10,8 @@ Most of this junk was written by Daniel Grzelak but there's been plenty of contr
 
 Things to do with pre-compromise information gathering.
 
-* validate_access_keys.py - Given a TSV file of access key + secret [+ session] combinations, checks access validity and returns identity information of the principal.
+* validate_iam_access_keys.py - Given a TSV file of access key + secret [+ session] combinations, checks access validity and returns identity information of the principal.
+* validate_s3_buckets.py - Given a text file with one word per line, checks whether the buckets exist and returns basic identifying information.
 
 ## Exploitation
 
@@ -39,4 +40,7 @@ Things to help you extract and move data around in AWSy ways.
 ## Miscellanea
 
 Other things that I was either to stupid or too lazy to classify.
+
+* reserved_words.txt - A list of words/tokens that have some special meaning in AWS or are likely to soon have some special meaning.
+* endpoints.txt - A somewhat up to date list of API endpoints exposed by AWS.
 
