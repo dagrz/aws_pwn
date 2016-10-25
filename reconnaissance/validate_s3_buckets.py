@@ -54,7 +54,7 @@ def validate_bucket_head(bucket_name):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Validate existences of s3 buckets.")
+    parser = argparse.ArgumentParser(description="Validate existence of s3 buckets in a file.")
     parser.add_argument('-i',
                         '--input-file',
                         type=argparse.FileType('r'),
