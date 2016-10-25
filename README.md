@@ -29,6 +29,8 @@ Things to help you understand what you've pwned.
 
 Things to help you move around an account and gather different levels of access.
 
+* dump_instance_attributes.py - Goes through every EC2 instance in the account and retrieves the specified instance attributes. Most commonly used to retrieve userData.
+
 ## Persistence
 
 Things to help maintain your access to an acccount.
