@@ -7,6 +7,7 @@ import argparse
 import uuid
 from datetime import datetime
 
+
 def main(args):
     all_results = []
     for line in args.input_file.readlines():
