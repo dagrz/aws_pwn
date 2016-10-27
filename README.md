@@ -13,6 +13,7 @@ Things to do with pre-compromise information gathering.
 * validate_iam_access_keys.py - Given a TSV file of access key + secret [+ session] combinations, checks access validity and returns identity information of the principal.
 * validate_s3_buckets.py - Given a text file with one word per line, checks whether the buckets exist and returns basic identifying information.
 * validate_iam_principals.py - Given a text file of principals (e.g. user/admin, role/deploy), checks whether the principals exist in a given account.
+* validate_accounts.py - Given a text file of account ids and account aliases, checks whether the accounts exist.
 
 ## Exploitation
 
@@ -36,6 +37,8 @@ Things to help you move around an account and gather different levels of access.
 
 Things to help maintain your access to an acccount.
 
+* rabbit_lambda - A example Lambda function that responds to user delete events by creating more copies of the deleted user.
+
 ## Exfiltration
 
 Things to help you extract and move data around in AWSy ways.
@@ -46,4 +49,6 @@ Other things that I was either to stupid or too lazy to classify.
 
 * reserved_words.txt - A list of words/tokens that have some special meaning in AWS or are likely to soon have some special meaning.
 * endpoints.txt - A somewhat up to date list of API endpoints exposed by AWS.
+* integrations.txt - A TSV of services that integrate with AWS via roles or access keys and their account ids, default usernames etc.
+* download_docs.sh - The command line to wget all the AWS docs because I'm stupid and waste time redoing it every time.
 
