@@ -12,7 +12,10 @@ Things to do with pre-compromise information gathering.
 
 * validate_iam_access_keys.py - Given a TSV file of access key + secret [+ session] combinations, checks access validity and returns identity information of the principal.
 * validate_s3_buckets.py - Given a text file with one word per line, checks whether the buckets exist and returns basic identifying information.
-* validate_iam_principals.py - Given a text file of principals (e.g. user/admin, role/deploy), checks whether the principals exist in a given account.
+* validate_iam_principals.py - Given a text file of principals (e.g. user/admin, role/deploy), checks whether the principals exist in a given account. 
+```
+./validate_iam_principals.py -a 123456789012 -i /tmp/words.txt -o /tmp/out.json; cat /tmp/out.json | jq '.[] | select(.exists==true)'
+```
 * validate_accounts.py - Given a text file of account ids and account aliases, checks whether the accounts exist.
 
 ## Exploitation
