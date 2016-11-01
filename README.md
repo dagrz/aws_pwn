@@ -24,7 +24,7 @@ Things to do with pre-compromise information gathering.
 ```
 * validate_accounts.py - Given a text file of account ids and account aliases, checks whether the accounts exist.
 ```
-./validate_accounts.py -i /tmp/acounts.txt -o /tmp/out.json
+./validate_accounts.py -i /tmp/accounts.txt -o /tmp/out.json
 ```
 
 ## Exploitation
@@ -57,6 +57,13 @@ Things to help you move around an account and gather different levels of access.
 Things to help maintain your access to an acccount.
 
 * rabbit_lambda - An example Lambda function that responds to user delete events by creating more copies of the deleted user.
+* cli_lambda - A lambda function that acts as an aws cli proxy and doesnt require credentials.
+* backdoor_created_users_lambda - A lambda function that adds an access key to each newly created user.
+* backdoor_created_roles_lambda - A lambda function that adds a trust relationship to each newly created role.
+* backdoor_created_security_groups_lambda - A lambda function that adds a given inbound access rule to each newly created security group.
+* backdoor_all_users.py - Adds an access key to every user in the account.
+* backdoor_all_roles.py - Adds a trust relationship to each role in the account. Requires editing the file to set the role ARN.
+* backdoor_all_security_groups.py - Adds a given inbound access rule to each security group in the account. Requires editing the file to set the rule.
 
 ## Exfiltration
 
