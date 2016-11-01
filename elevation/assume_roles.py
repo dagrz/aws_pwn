@@ -16,7 +16,8 @@ def main(args):
             if(line and not line.startswith('#')):
                 result = attempt_assume_role(line)
                 all_results.append(result)
-                print(json.dumps(result, indent=2))
+                if result['result'] == 'success':
+                    print(json.dumps(result, indent=2))
         args.input_file.close()
     else:
         role_arns = get_role_arns()
