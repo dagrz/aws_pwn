@@ -17,6 +17,9 @@ Things to do with pre-compromise information gathering.
 ./validate_iam_principals.py -a 123456789012 -i /tmp/words.txt -o /tmp/out.json; cat /tmp/out.json | jq '.[] | select(.exists==true)'
 ```
 * validate_accounts.py - Given a text file of account ids and account aliases, checks whether the accounts exist.
+```
+./validate_accounts.py -i /tmp/acounts.txt -o /tmp/out.json
+```
 
 ## Exploitation
 
@@ -35,6 +38,13 @@ Things to help you understand what you've pwned.
 Things to help you move around an account and gather different levels of access.
 
 * dump_instance_attributes.py - Goes through every EC2 instance in the account and retrieves the specified instance attributes. Most commonly used to retrieve userData.
+```
+./dump_instance_attributes.py -u -o /tmp/
+```
+* assume_roles.py - Attempts to assume all roles (ARNs) in a file or provided by the list-roles API.
+```
+./assume_roles.py -o /tmp/out.json
+```
 
 ## Persistence
 
