@@ -13,7 +13,8 @@ def main(args):
         if(line and not line.startswith('#')):
             result = validate_bucket('head', line)
             all_results.append(result)
-            print(json.dumps(result, indent=2))
+            if result['exists']:
+                print(json.dumps(result, indent=2))
     args.input_file.close()
 
     if(args.output_file is not None):

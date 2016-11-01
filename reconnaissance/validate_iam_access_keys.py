@@ -20,7 +20,8 @@ def main(args):
                     session_token = parts[2]
                 result = validate_key('caller_identity', access_key_id, secret_access_key, session_token)
                 all_results.append(result)
-                print(json.dumps(result, indent=2))
+                if result['result'] == 'success':
+                    print(json.dumps(result, indent=2))
     args.input_file.close()
 
     if(args.output_file is not None):

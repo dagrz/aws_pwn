@@ -15,7 +15,8 @@ def main(args):
         if(line and not line.startswith('#')):
             result = validate_principal('trust_policy', line)
             all_results.append(result)
-            print(json.dumps(result, indent=2))
+            if result['exists']:
+                print(json.dumps(result, indent=2))
     args.input_file.close()
 
     if(args.output_file is not None):
@@ -71,7 +72,7 @@ def validate_principal_trust_policy(principal_name):
         except:
             pass
     except ClientError as e:
-        result['error'] = e.response['Error']['Message'];
+        result['error'] = e.response['Error']['Message']
     
     return result
     
