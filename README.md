@@ -35,9 +35,19 @@ Things that will help you gain a foothold in an account.
 
 Things that might help you stay hidden after compromising an account.
 
+* disrupt_cloudtrail.py - Attempts to disrupt/cripple cloudtrail logging in the specified way.
+```
+./disrupt_cloudtrail.py -s
+```
+
 ## Exploration
 
 Things to help you understand what you've pwned.
+
+* dump_account_data.sh - Calls a bunch of generic account-based read/list/get/describe functions and saves the data to a given location. Very noisy but great for a point in time snapshot.
+```
+./dump_account_data.sh /tmp/
+```
 
 ## Elevation
 
