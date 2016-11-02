@@ -111,3 +111,6 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Non-public stuff
+elevation/bouncy_bouncy_cloudy_cloud.py

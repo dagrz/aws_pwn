@@ -88,3 +88,19 @@ Other things that I was either to stupid or too lazy to classify.
 * integrations.txt - A TSV of services that integrate with AWS via roles or access keys and their account ids, default usernames etc.
 * download_docs.sh - The command line to wget all the AWS docs because I'm stupid and waste time redoing it every time.
 
+## To do
+
+* Dump stack resources
+* Validate mfa
+* Add more calls to dump_account_data
+* Add more log disruption methods
+* Create a cloudtrail parsing script for grabbing goodies out of cloudtrail
+* Create an s3 bucket permission enumerator
+* Fix up persistence scripts to use arguments instead of constants inside the scripts
+* Create tool to grab aws credentials from common places on disk
+* Create cloning tool
+* Create silly privelege escalation tool that uses iam putpolicy etc
+* Create silly privelege escalation tool that uses passrole
+* Validate queues
+* Validate notification topics
+* Dump CF stack resources including deleted

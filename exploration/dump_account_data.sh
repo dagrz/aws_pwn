@@ -146,9 +146,23 @@ aws directconnect describe-virtual-gateways > directconnect-describe-virtual-gat
 # https://docs.aws.amazon.com/cli/latest/reference/directconnect/describe-virtual-interfaces.html
 aws directconnect describe-virtual-interfaces > directconnect-describe-virtual-interfaces.json
 
+# https://docs.aws.amazon.com/cli/latest/reference/cloudtrail/index.html
+###
+# https://docs.aws.amazon.com/cli/latest/reference/cloudtrail/describe-trails.html
+aws cloudtrail describe-trails > cloudtrail-describe-trails.json
+# https://docs.aws.amazon.com/cli/latest/reference/cloudtrail/list-public-keys.html
+aws cloudtrail list-public-keys > cloudtrail-list-public-keys.json
 
-
-
+# https://docs.aws.amazon.com/cli/latest/reference/cloudformation/
+###
+# https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-account-limits.html
+aws cloudformation describe-account-limits > cloudformation-describe-account-limits.json
+# https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stacks.html
+aws cloudformation describe-stacks > cloudformation-describe-stacks.json
+# https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html
+aws cloudformation list-exports > cloudformation-list-exports.json
+# https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-stacks.html
+aws cloudformation list-stacks > cloudformation-list-stacks.json
 
 
 
