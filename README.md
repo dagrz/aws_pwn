@@ -53,9 +53,13 @@ Things to help you understand what you've pwned.
 
 Things to help you move around an account and gather different levels of access.
 
-* dump_instance_attributes.py - Goes through every EC2 instance in the account and retrieves the specified instance attributes. Most commonly used to retrieve userData.
+* dump_instance_attributes.py - Goes through every EC2 instance in the account and retrieves the specified instance attributes. Most commonly used to retrieve userData, which tends to contain secrets.
 ```
 ./dump_instance_attributes.py -u -o /tmp/
+```
+* dump_cloudformation_stack_descriptions.py - Retrieves the stack descriptions for every existing stack and every stack deleted in the last 90 days. Parameters in stack descriptions often contain passwords and other secrets.
+```
+./dump_cloudformation_stack_descriptions.py -o /tmp/data
 ```
 * assume_roles.py - Attempts to assume all roles (ARNs) in a file or provided by the list-roles API.
 ```
