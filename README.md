@@ -65,6 +65,10 @@ Things to help you move around an account and gather different levels of access.
 ```
 ./assume_roles.py -o /tmp/out.json
 ```
+* add_iam_policy - Adds the administrator and all action policy to a given user, role, or group. Requires IAM putPolicy or attachPolicy privileges.
+```
+./add_iam_policy.py -u myuser -r myrole -g mygroup
+```
 
 ## Persistence
 
@@ -94,17 +98,16 @@ Other things that I was either to stupid or too lazy to classify.
 
 ## To do
 
+* Add passwords to users for persistence
 * Dump stack resources
 * Validate mfa
 * Add more calls to dump_account_data
 * Add more log disruption methods
 * Create a cloudtrail parsing script for grabbing goodies out of cloudtrail
 * Create an s3 bucket permission enumerator
-* Fix up persistence scripts to use arguments instead of constants inside the scripts
 * Create tool to grab aws credentials from common places on disk
 * Create cloning tool
-* Create silly privelege escalation tool that uses iam putpolicy etc
 * Create silly privelege escalation tool that uses passrole
 * Validate queues
 * Validate notification topics
-* Dump CF stack resources including deleted
+* Fix up persistence scripts to use arguments instead of constants inside the scripts
