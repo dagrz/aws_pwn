@@ -6,6 +6,14 @@ This is a collection of horribly written scripts for performing various tasks re
 
 Most of this junk was written by Daniel Grzelak but there's been plenty of contributions, most notably Mike Fuller.
 
+## Requirements
+
+```
+pip install -r requirements.txt
+```
+
+Make sure to also [set up your aws credentials](https://github.com/boto/boto3#quick-start) in `~/.aws/credentials`.
+
 ## Reconnaissance
 
 Things to do with pre-compromise information gathering.
