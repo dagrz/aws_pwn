@@ -130,6 +130,9 @@ aws ec2 describe-vpn-connections > ec2-describe-vpn-connections.json
 # https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-vpn-gateways.html
 aws ec2 describe-vpn-gateways > ec2-describe-vpn-gateways.json
 
+# https://docs.aws.amazon.com/cli/latest/reference/s3/ls.html
+aws s3 ls > s3-list-buckets.txt
+
 # https://docs.aws.amazon.com/cli/latest/reference/support/index.html
 ###
 # https://docs.aws.amazon.com/cli/latest/reference/support/describe-cases.html
