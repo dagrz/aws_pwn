@@ -84,10 +84,10 @@ Things to help you move around an account and gather different levels of access.
 
 ## Persistence
 
-Things to help maintain your access to an acccount.
+Things to help maintain your access to an account.
 
 * rabbit_lambda - An example Lambda function that responds to user delete events by creating more copies of the deleted user.
-* cli_lambda - A lambda function that acts as an aws cli proxy and doesnt require credentials.
+* cli_lambda - A lambda function that acts as an aws cli proxy and doesn't require credentials.
 * backdoor_created_users_lambda - A lambda function that adds an access key to each newly created user.
 * backdoor_created_roles_lambda - A lambda function that adds a trust relationship to each newly created role.
 * backdoor_created_security_groups_lambda - A lambda function that adds a given inbound access rule to each newly created security group.
@@ -122,7 +122,7 @@ Other things that I was either to stupid or too lazy to classify.
 * Create an s3 bucket permission enumerator
 * Create tool to grab aws credentials from common places on disk
 * Create cloning tool
-* Create silly privelege escalation tool that uses passrole
+* Create silly privilege escalation tool that uses passrole
 * Validate queues
 * Validate notification topics
 * Fix up persistence scripts to use arguments instead of constants inside the scripts
